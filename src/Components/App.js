@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Navbar from './Navbar.js'
 import PlayList from './PlayList.js'
 import '../App.css'
@@ -8,7 +8,7 @@ class App extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      userName: [],
+      userName: '',
       songArtist: '',
       songTitle: '',
       songNotes: ''
@@ -17,9 +17,8 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div className="Root">
         <div className="container">
-          <Header />
           <Navbar />
           <PlayList />
         </div>

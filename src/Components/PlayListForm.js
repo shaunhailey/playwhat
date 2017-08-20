@@ -1,3 +1,6 @@
+import React, { Component } from 'react'
+import Navbar from './Navbar.js'
+
 addToList = e => {
   e.preventDefault()
   this.setState({
@@ -24,3 +27,5 @@ addToList = e => {
     })
   this.setState({ userName: '', songNotes: '', songArtist: '', songTitle: '' })
 }
+
+export default PlayListForm
