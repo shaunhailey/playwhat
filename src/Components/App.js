@@ -1,8 +1,9 @@
 import React, { Component } from 'react'
 import Navbar from './Navbar.js'
 import PlayList from './PlayList.js'
-import '../App.css'
-import '../index.css'
+import PlayListForm from './PlayListForm.js'
+import '../Styles/App.css'
+import '../Styles/index.css'
 
 class App extends Component {
   constructor(props) {
@@ -17,10 +18,10 @@ class App extends Component {
 
   render() {
     return (
-      <div className="Root">
+      <div id="root" className="root">
         <div className="container">
           <Navbar />
-          <PlayList />
+          <PlayListForm />
         </div>
       </div>
     )
