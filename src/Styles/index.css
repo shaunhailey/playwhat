@@ -3,3 +3,50 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+.Navbar {
+  background-color: white;
+  width: 100%;
+  border-style: solid;
+  border-color: black;
+  color: black;
+}
+.container {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.containerDos {
+  display: flex;
+  flex-direction: row;
+}
+.songNotes,
+.userName,
+.songArtist,
+.songTitle,
+.placeholders {
+  background-color: white;
+  font-family: 'Crimson Text', serif;
+  border-style: solid;
+  border-color: black;
+}
+.songListResults {
+  background-color: white;
+}
+.songList {
+  border-style: solid;
+  border-color: black;
+}
+.PlayListForm {
+  flex: 1;
+}
+.Playlist {
+  flex: 2;
+}
+ul {
+  list-style: none;
+}
+button {
+  font-family: 'Crimson Text', serif;
+  color: black;
+}

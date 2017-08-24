@@ -22,8 +22,10 @@ class App extends Component {
       <div id="root" className="root">
         <div className="container">
           <Navbar />
-          <PlayListForm />
-          <PlayList />
+          <div className="containerDos">
+            <PlayListForm />
+            <PlayList />
+          </div>
         </div>
       </div>
     )
