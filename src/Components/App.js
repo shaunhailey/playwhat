@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Navbar from './Navbar.js'
 import PlayList from './PlayList.js'
 import PlayListForm from './PlayListForm.js'
+import PlayListItem from './PlayListItem'
 import '../Styles/App.css'
 import '../Styles/index.css'
 
@@ -22,6 +23,7 @@ class App extends Component {
         <div className="container">
           <Navbar />
           <PlayListForm />
+          <PlayList />
         </div>
       </div>
     )

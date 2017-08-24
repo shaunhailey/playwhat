@@ -3,17 +3,39 @@ import Navbar from './Navbar.js'
 import PlayList from './PlayList.js'
 
 class PlayListForm extends Component {
-  constructor(props) {
-    super(props)
+  state = {
+    userName: '',
+    songNotes: '',
+    songArtist: '',
+    songTitle: ''
   }
+
+  handleUserName = event => {
+    this.setState({
+      userName: event.target.value
+    })
+  }
+
+  handlesongNotes = event => {
+    this.setState({
+      songNotes: event.target.value
+    })
+  }
+
+  handlesongArtist = event => {
+    this.setState({
+      songArtist: event.target.value
+    })
+  }
+
+  handlesongTitle = event => {
+    this.setState({
+      songTitle: event.target.value
+    })
+  }
+
   addToList = e => {
     e.preventDefault()
-    this.setState({
-      userName: e.target.value,
-      songTitle: e.target.value,
-      songArtist: e.target.value,
-      songNotes: e.target.value
-    })
     let listItem = JSON.stringify(this.state)
 
     fetch('https://tiny-lasagna-server.herokuapp.com/collections/playlisting', {
@@ -32,6 +54,7 @@ class PlayListForm extends Component {
       })
     this.setState({ userName: '', songNotes: '', songArtist: '', songTitle: '' })
   }
+
   render() {
     return (
       <div className="PlayListForm">
@@ -67,7 +90,7 @@ class PlayListForm extends Component {
           placeholder="Notes about song"
           value={this.state.songNotes}
         />
-        <button type="submit" name="button">
+        <button type="submit" name="button" onClick={this.addToList}>
           Submit
         </button>
       </div>
